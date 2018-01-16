@@ -1,0 +1,220 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'RobotoRegular';
+}
+.clearfix:before,
+.clearfix:after {
+    content: '';
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.wrapper{
+    width: 100%;
+    padding-bottom: 30px;
+}
+.row{
+    width: 100%;
+    padding-top: 30px;
+}
+.row img{
+    width: 100%;
+   z-index:-2;
+    height: 100%;
+    position: relative;
+}
+.card{
+    display: inline-block;
+    width: 33.33333%;
+    height: 280px;
+    padding-right: 30px;
+    float: left;
+    transition: box-shadow .2s ease-in-out;
+}
+.card-last{
+    padding-right: 0;
+}
+.card-link{
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+.card-link:hover{
+    box-shadow: inset -3px -200px 100px -100px rgba(0, 0, 0, .2);
+    cursor: url(../img/orange-cursor.png), auto;
+}
+.card-link-hover{
+    position: absolute;
+    left: 50%;
+    bottom: -100px;
+    transform: translateX(-50%);
+    transition: bottom .2s ease-in-out;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 20px;
+    letter-spacing: 1px;
+}
+.card-link-hover p{
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.project-info{
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+.card-link:hover .card-link-hover{
+    bottom: 10px;
+}
+/***********Form************/
+.form-wrapper{
+    padding: 60px 0;
+    background-color: #fafafa;
+}
+.form-header{
+    text-transform: uppercase;
+    font-family: 'RobotoLight';
+    padding-bottom: 30px;
+    color: rgba(0, 0, 0, .7);
+}
+form{
+    padding: 50px 85px;
+    width: 75%;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, .2);
+    background-color: #fff;
+}
+
+.form-row{
+    width: 100%;
+    height: 50px;
+    padding-bottom: 70px;
+}
+
+.form-row-item{
+    display: inline-block;
+    position: relative;
+    width: 40%;
+    margin-right: 130px;
+}
+.form-row-item:last-child{
+    margin-right: 0;
+}
+
+.form-label{
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: top .3s ease-in-out;
+    color: rgba(0, 0, 0, .2);
+}
+
+.form-input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    padding: 5px 0;
+    outline: none;
+    display: block;
+}
+
+.form-input:focus +.empty-for-border + .form-label{
+     top: -20px;
+     color: #00abeb;
+     font-size: 12px;
+ }
+
+.empty-for-border{
+
+    width: 100%;
+}
+
+.empty-for-border:before,
+.empty-for-border:after{
+    content: "";
+    height: 2px;
+    width: 0;
+    background: #00abeb;
+    position: absolute;
+    bottom: 0;
+    transition: width .3s ease-in-out;
+}
+
+.empty-for-border:before{
+    right: 50%;
+}
+
+.empty-for-border:after{
+    left: 50%;
+}
+
+.form-input:focus + .empty-for-border:before,
+.form-input:focus + .empty-for-border:after {
+    width: 50%;
+}
+.textarea-row{
+    position: relative;
+}
+.form-textarea{
+    width: 100%;
+    height: 200px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    transition: border .3s ease-in-out;
+    resize:none;
+    padding: 30px 10px 10px;
+    margin-bottom: 45px;
+}
+
+.form-textarea:focus{
+    border: 2px solid #00abeb;
+}
+.form-textarea-label{
+    width: 150px;
+    left: 15px;
+    top: 15px;
+    transition: left .2s ease-in-out;
+    transition: top .2s ease-in-out;
+    transition: font-size .2s ease-in-out;
+}
+
+.form-textarea:focus + .form-textarea-label{
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    color: #00abeb;
+}
+
+.form-button{
+    color: #fff;
+    text-transform: uppercase;
+    height: 42px;
+    width: 19%;
+    float: right;
+    background-color: #00abeb;
+    border: none;
+    border-bottom: 3px solid #008ebc;
+    text-align: left;
+    padding: 10px 15px;
+    letter-spacing: .5px;
+    position: relative;
+    border-radius: 2px;
+}
+
+
+.button-text:after{
+    content: "";
+    background-image: url("../img/ic_send_white_24dp/web/ic_send_white_24dp_1x.png");
+    position: absolute;
+    width: 26px;
+    height: 20px;
+    top: 6px;
+    left: 118px;
+}
